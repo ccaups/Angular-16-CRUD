@@ -1,0 +1,46 @@
+{
+   "creditcards" : [
+        {
+            "id":1,
+            "cardName": "Bank of America - Platinum Card",
+            "description":"Bank of America offers customers with veriety of options",
+            "maxCredit": 8000,
+            "active": true,
+            "anuualFeee": 0,
+            "interestRate": 13.5,
+            "introOffer": 200,
+            "recommededCreditScore": "600-800",
+            "numberOfApplications": 40,
+            "createdDate": "28-05-2024",
+            "termsAndConditions": "The following conditions are applicable for this card"
+        },
+        {
+            "id":2,
+            "cardName": "Bank of America - Gold Card",
+            "description":"Bank of America offers customers with veriety of options",
+            "maxCredit": 10000,
+            "active": true,
+            "anuualFeee": 0,
+            "interestRate": 13.5,
+            "introOffer": 200,
+            "recommededCreditScore": "600-800",
+            "numberOfApplications": 40,
+            "createdDate": "28-05-2024",
+            "termsAndConditions": "The following conditions are applicable for this card"
+        },
+        {
+            "id":3,
+            "cardName": "Bank of America - Silver Card",
+            "description":"Bank of America offers customers with veriety of options",
+            "maxCredit": 9000,
+            "active": true,
+            "anuualFeee": 0,
+            "interestRate": 13.5,
+            "introOffer": 200,
+            "recommededCreditScore": "600-800",
+            "numberOfApplications": 40,
+            "createdDate": "27-05-2024",
+            "termsAndConditions": "The following conditions are applicable for this card"
+        }
+    ] 
+}
