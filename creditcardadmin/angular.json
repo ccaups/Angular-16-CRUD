@@ -15,11 +15,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/creditcardadmin",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -33,12 +33,7 @@
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -57,9 +52,12 @@
               "outputHashing": "all"
             },
             "development": {
+              "buildOptimizer": false,
               "optimization": false,
+              "vendorChunk": true,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "namedChunks": true
             }
           },
           "defaultConfiguration": "production"
@@ -68,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "creditcardadmin:build:production"
+              "browserTarget": "creditcardadmin:build:production"
             },
             "development": {
-              "buildTarget": "creditcardadmin:build:development"
+              "browserTarget": "creditcardadmin:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "creditcardadmin:build"
+            "browserTarget": "creditcardadmin:build"
           }
         },
         "test": {
@@ -106,6 +104,6 @@
     }
   },
   "cli": {
-    "analytics": "280fc546-3906-4156-9f6d-ca1fc8b8c502"
+    "analytics": "f0a0c32d-b0df-424e-a390-b8e0cd0182d3"
   }
 }
