@@ -3,10 +3,11 @@
         {
             "id":1,
             "cardName": "Bank of America - Platinum Card",
+            "bankName": "Bank of America",
             "description":"Bank of America offers customers with veriety of options",
             "maxCredit": 8000,
             "active": true,
-            "anuualFeee": 0,
+            "annualFeee": 0,
             "interestRate": 13.5,
             "introOffer": 200,
             "recommededCreditScore": "600-800",
@@ -16,7 +17,8 @@
         },
         {
             "id":2,
-            "cardName": "Bank of America - Gold Card",
+            "cardName": "Chase of America - Gold Card",
+            "bankName": "Chase of America",
             "description":"Bank of America offers customers with veriety of options",
             "maxCredit": 10000,
             "active": true,
@@ -30,7 +32,8 @@
         },
         {
             "id":3,
-            "cardName": "Bank of America - Silver Card",
+            "cardName": "Rich of America - Silver Card",
+            "bankName": "Rich of America",
             "description":"Bank of America offers customers with veriety of options",
             "maxCredit": 9000,
             "active": true,
