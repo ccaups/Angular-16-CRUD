@@ -38,7 +38,7 @@ export class CreditcardsService {
   }
 
   //Delete Functionality
-  deleteCreditCard(id: number): Observable<void> {
+  deleteCreditCard(id: Number): Observable<void> {
     const url = `${this.apiUrl}/${id}`;
     return this.httpClient.delete<void>(url);
   }
