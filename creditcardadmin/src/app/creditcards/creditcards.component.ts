@@ -15,12 +15,17 @@ export class CreditcardsComponent {
 
   creditcards: CreditCard[] = [];
 
+  creditCardMaximumAmount: number = 0;
+  creditCardMaximumInterest: number = 0;
+
   constructor(private creditcardsservice: CreditcardsService){
     this.creditcardsservice.getCreditCards().subscribe((data:CreditCard[]) =>{
       this.creditcards = data;
       this.dataSource = new MatTableDataSource(this.creditcards);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
+
+      this.calculateMetrics();
     })
   }
   dataSource = new MatTableDataSource(this.creditcards);
@@ -36,4 +41,8 @@ export class CreditcardsComponent {
     this.selection.toggle(row as never);
   }
   
+  calculateMetrics(){
+    this.creditCardMaximumAmount = this.creditcards.filter(card => card.maxCredit > 3000).length;
+    this.creditCardMaximumInterest = this.creditcards.filter(card => card.interestRate > 7).length;
+  }
 }
