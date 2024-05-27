@@ -2,8 +2,8 @@
   "name": "creditcardadmin",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
+    "ng": "ng serve",
+    "start": "run-p json-server ng",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
@@ -30,6 +30,7 @@
     "@angular/cli": "^16.2.14",
     "@angular/compiler-cli": "^16.2.0",
     "@types/jasmine": "~4.3.0",
+    "@types/uuid": "^9.0.8",
     "jasmine-core": "~4.6.0",
     "json-server": "^1.0.0-beta.0",
     "karma": "~6.4.0",
@@ -37,6 +38,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "npm-run-all": "^4.1.5",
     "typescript": "~5.1.3"
   }
 }
