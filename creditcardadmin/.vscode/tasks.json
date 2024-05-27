@@ -37,6 +37,14 @@
           }
         }
       }
-    }
+    },
+    {
+      "label": "json-server",
+      "type": "shell",
+      "command": "json-server",
+      "args": ["--watch", "db.json"],
+      "problemMatcher": [],
+      "isBackground": true
+  }
   ]
 }
