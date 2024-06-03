@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 import { CreditCard } from 'src/app/models/credit-card';
 import { CreditcardsService } from 'src/app/services/creditcards.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit',
@@ -22,6 +23,7 @@ export class EditComponent {
   private destroy$ : Subject<void> = new Subject<void>();
 
   constructor(private formBuilder: FormBuilder,
+    private router: Router,
     private route: ActivatedRoute,
     private snackBar: MatSnackBar,
     private creditCardsService: CreditcardsService) {
@@ -65,6 +67,7 @@ export class EditComponent {
       .pipe(takeUntil(this.destroy$))
       .subscribe(()=> {
         this.showSuccessMessage("Credit Card Updated Successfully");
+        this.router.navigate(['creditcards']);
       })
     }
   }
